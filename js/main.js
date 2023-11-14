@@ -14,17 +14,17 @@ function createTicket(event){
         if (age=="Minorenne") {
             ticketPrice -= (ticketPrice* 0.20);
             ticketPrice=parseFloat(ticketPrice.toFixed(2));
-            document.getElementById("user_ticket_price").innerHTML=ticketPrice;
+            document.getElementById("user_ticket_price").innerHTML=ticketPrice + " euro";
             document.getElementById("user_ticket_type").innerHTML= "Biglietto ridotto";
         }
         else if(age=="Over 65"){
             ticketPrice -= (ticketPrice* 0.40);
             ticketPrice=parseFloat(ticketPrice.toFixed(2));
-            document.getElementById("user_ticket_price").innerHTML=ticketPrice;
+            document.getElementById("user_ticket_price").innerHTML=ticketPrice + " euro";
             document.getElementById("user_ticket_type").innerHTML= "Biglietto ridotto";
         }
         else {
-            document.getElementById("user_ticket_price").innerHTML=ticketPrice;
+            document.getElementById("user_ticket_price").innerHTML=ticketPrice + " euro";
             document.getElementById("user_ticket_type").innerHTML= "Biglietto standard";
         }
 
@@ -36,17 +36,19 @@ function createTicket(event){
         document.getElementById("user_name").innerHTML=name;
         document.getElementById("user_place").innerHTML=randomNumber1;
         document.getElementById("user_cp_code").innerHTML=randomNumber2;
-            
-
-
-
-    
-
-
-    
-
-
         
     }
+
+}
+
+
+function resetAll(event) {
+    event.preventDefault();
+
+    document.getElementById("user_name").innerHTML="";
+    document.getElementById("user_place").innerHTML="";
+    document.getElementById("user_cp_code").innerHTML="";
+    document.getElementById("user_ticket_price").innerHTML="";
+    document.getElementById("user_ticket_type").innerHTML= "";
 
 }

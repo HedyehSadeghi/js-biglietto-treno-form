@@ -20,7 +20,7 @@
   <div class="container">
     <h2 class="text-center mt-5 mb-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-    <form id="ticket_form" onsubmit="createTicket(event)" class="g-3 border p-4 bg-white">
+    <form id="ticket_form" onsubmit="createTicket(event)" onreset="resetAll(event)" class="g-3 border p-4 bg-white">
       <div class="row my-4">
 
         <div class="col-lg-4 col-mg-4 col-6 ">
@@ -42,25 +42,25 @@
       </div>
 
 
-      <div>
-        <div class="col-12 col-lg-12 col-md-12 text-center">
-          <button type="submit" class="btn btn-primary">Crea biglietto</button>
-        </div>
+      <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary mx-2">Crea biglietto</button>
+          <button class="btn btn-danger" type="reset">Annulla</button>
       </div>
+
     </form>
 
 
-    <div class="row">
+    <div class="row mt-5 mx-3">
       <h2 class="text-center mt-4 mb-3">IL TUO BIGLIETTO</h2>
     </div>
 
-    <div class="row">
+    <div class="row bg-white mx-3">
         <h4>Dettaglio dei passeggeri</h4>
     </div>
     
 
-    <div class="row">
-      <div class="col-lg-4 col-mg-5 col-12">
+    <div class="row bg-white mx-3">
+      <div class="col-lg-4 col-mg-5 col-12 d-flex justify-content-center align-items-center">
         <h4>NOME PASSEGGERO</h4>
       </div>
 
@@ -82,25 +82,25 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-4 col-mg-5 col-12">
+    <div class="row bg-white mx-3" style="height: 6em;">
+      <div class="col-lg-4 col-mg-5 col-12 d-flex align-items-end justify-content-center pb-2">
         <h5><span id="user_name"></span></h5>
       </div>
 
-      <div class="col-lg-2 col-mg-2 col-3">
+      <div class="col-lg-2 col-mg-2 col-3 d-flex align-items-end">
         <p><span id="user_ticket_type"></span></p>
 
       </div>
-      <div class="col-lg-2 col-mg-2 col-3">
+      <div class="col-lg-2 col-mg-2 col-3 d-flex align-items-end">
         <p><span id="user_place"></span></p>
 
       </div>
-      <div class="col-lg-2 col-mg-2 col-3">
+      <div class="col-lg-2 col-mg-2 col-3 d-flex align-items-end">
         <p><span id="user_cp_code"></span></p>
 
       </div>
-      <div class="col-lg-2 col-mg-2 col-3">
-        <p><span id="user_ticket_price"></span> &euro; </p>
+      <div class="col-lg-2 col-mg-2 col-3 d-flex align-items-end">
+        <p><span id="user_ticket_price"></span></p>
 
       </div>
 
